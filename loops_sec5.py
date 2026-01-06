@@ -20,7 +20,7 @@ for email in emails:
     else:
         print(f"Invalid email: {email}")
 
-#Given API request logs as status codes.Count how many requests failed (status code ≥ 400).
+#Given request logs as status codes.Count how many requests failed (status code ≥ 400).
 logs = [200, 201, 400, 401, 500, 200]
 failed_count=0
 for status in logs:
@@ -28,9 +28,9 @@ for status in logs:
         failed_count+=1
 print(f"Number of failed requests: {failed_count}")
 
-#Given a list of API keys, check whether a provided key is valid.
+#Given a list of keys, check whether a provided key is valid.
 #If found → "Access Granted"
-#Else → "Invalid API Key"
+#Else → "Invalid Key"
 
 keys = ["key1", "key2", "key3"]
 provided_key = "key2"
@@ -39,7 +39,7 @@ for key in keys:
         print("Access Granted")
         break
 else:
-    print("Invalid API Key")
+    print("Invalid Key")
 #Check if a user ID exists before processing a request.
 #Use for-else
 #Print "User Found" or "User Not Found"

@@ -26,12 +26,3 @@ elif marks>=40 and marks<=59:
     print("Grade D")
 else:
     print("Grade F")    
-#login system
-username="admin"
-pas=1234
-if username=="admin" and pas==1234:
-    print("Login successful")
-elif pas!=1234:
-    print("Incorrect password")
-else:
-    print("Username not found")
