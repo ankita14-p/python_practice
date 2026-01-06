@@ -53,5 +53,4 @@ for uid in user_ids:
 else:
     print("User Not Found")
 
-#Assign serial numbers to API response data using enumerate().
-responses=[""]
+
