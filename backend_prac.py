@@ -43,11 +43,11 @@ def validation(request):
 
 validation(request)
 
-#Check password strength:
+#Check pass strength:
 #length ≥ 8
 #contains at least one digit
 #Print "Strong" or "Weak".
-pas=input("Enter your passowrd:")
+pas=input("Enter your pass:")
 
 if len(pas)>=8:
     for char in pas:
