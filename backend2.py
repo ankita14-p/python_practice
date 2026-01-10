@@ -48,7 +48,7 @@ for attempts in login_attempt:
 
 #Loop through requests and skip those with status code 404.
 
-requests=[200,201,404,400,300,250,404]
+requests=[200,201,404,400,300,250,404,106]
 
 for status in requests:
     if status==404:

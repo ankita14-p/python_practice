@@ -62,6 +62,6 @@ for key in d:   #each key in new line
 for value in d.values(): #each value in new line
     print(value)
 
-#Iterate through key-value pairs
+#Iterate through key-value pairs 
 for key,value in d.items(): #each key-value pair in new line
     print(key,value)
