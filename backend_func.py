@@ -1,23 +1,24 @@
-def create_task(*args,title,assigned_to,assigned_by,due_date):
-    if title is " ":
+task_list=[]
+def create_task(*args,dept_name,title,assigned_to,assigned_by,due_date):
+    if title==" ":
         return "Error: Title cannot be empty"
     task={
         "title":title,
         "assigned_to":assigned_to,
         "assigned_by":assigned_by,
+        "department":dept_name,
         "due_date":due_date,
         "tags":args
     }
-    return task
-def display_task(task):
-    print("Title:",task["title"])
-    print("Assigned To:",task["assigned_to"])
-    print("Assigned By:",task["assigned_by"])
-    print("Due Date:",task["due_date"])
-    print("Tags:"," ".join(task["tags"]))
+    task_list.append(task)
+def display_task():
+      for task in task_list:
+            print(f"{task}")
 
-task1=create_task("urgent","remote","frontend",title="Complete Report",assigned_to="John",assigned_by="Alice",due_date="2026-02-15")
-display_task(task1)
+create_task("urgent","remote","frontend",dept_name="it",title="Complete Report",assigned_to="John",assigned_by="Alice",due_date="2026-02-15")
+create_task("urgent","remote","frontend",dept_name="hr",title="Complete Report",assigned_to="John",assigned_by="Alice",due_date="2026-02-15")
+create_task("urgent","remote","frontend",dept_name="it",title="Complete Report",assigned_to="John",assigned_by="Alice",due_date="2026-02-15")
+display_task()
 
 def update_task_status(task:int,*,status:str):
      """Update the status of a task."""
@@ -34,6 +35,14 @@ def display_task_staus(task_status):
         print("Task ID:",task_status["task_id"])
         print("Status:",task_status["status"])
 display_task_staus(task_status1)
+
+def get_tasks_by_department(task_list,/,dept_name="General"):
+        """Retrieve tasks by department."""
+        filtered_tasks=[task for task in task_list if task["department"]==dept_name]
+        return filtered_tasks
+it_tasks=get_tasks_by_department(task_list,dept_name="it")
+print(it_tasks)
+
      
         
 
