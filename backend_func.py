@@ -53,8 +53,21 @@ add_subscriber("ankita@example.com") #not added in active_subscribers
 add_subscriber("john@example.com",active_subscribers)
 add_subscriber("alice@example.com",active_subscribers)
 print(active_subscribers)
+active_employees=[101,104,109,108,110,111]
+def log_action(*,employee_id:int,action:str,**kwargs) -> str | dict:
+      """Log an action performed by an employee"""
+      if employee_id not in active_employees:
+            return "Error: Unauthorized employee"
+      action_log={
+            "employee_id":employee_id,
+            "action":action,
+            "details":kwargs
+        }
+      return action_log
 
-
+action=log_action(employee_id=104,action="Updated Task",browser="Chrome",timetsamp="2024-10-01 10:00:00")
+print(action)
+     
 
 
 
