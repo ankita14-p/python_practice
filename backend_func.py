@@ -42,6 +42,21 @@ def get_tasks_by_department(task_list,/,dept_name="General"):
         return filtered_tasks
 it_tasks=get_tasks_by_department(task_list,dept_name="it")
 print(it_tasks)
+active_subscribers=[]
+def add_subscriber(email:str,current_list=None):
+    """Add a subscriber to the mailing list."""
+    if current_list is None:
+          current_list=[]
+    current_list.append(email)
+    return 
+add_subscriber("ankita@example.com") #not added in active_subscribers
+add_subscriber("john@example.com",active_subscribers)
+add_subscriber("alice@example.com",active_subscribers)
+print(active_subscribers)
+
+
+
+
 
      
         
