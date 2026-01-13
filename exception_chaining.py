@@ -21,10 +21,7 @@ def calculate_workload(emp_data,total_hours, num_tasks):
     except ZeroDivisionError as e:
         raise TaskAssignmnetError("Cannot assign tasks when there are zero tasks.") from e
     else:
-        try:
-           workload_per_task=emp_data["worload_per_task"]
-        except KeyError as e:
-            raise TaskAssignmnetError("Employee data is missing 'workload_per_task' key.") from e
+        emp_data['worload_per_task'] = workload_per_task
         return f"Workload per task for {emp_data['name']}: {workload_per_task} hours"  
     
 tasks_to_process=[
