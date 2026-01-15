@@ -4,7 +4,7 @@ class Task:
     total_tasks=0
     title: str
     description: str
-    status: str
+    status: str="Pending"
     priority: str
     due_date: str
     __duration: int
